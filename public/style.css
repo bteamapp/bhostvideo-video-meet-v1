@@ -41,7 +41,7 @@
 
 .videos__group {
   flex-grow: 1;
-  display: flex;
+//  display: flex;  Delete this commit //
   justify-content: center;
   align-items: center;
   padding: 1rem;
