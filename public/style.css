@@ -49,13 +49,13 @@
 }
 
 video {
-  height: 300px;
+  height: 180px;
   border-radius: 1rem;
   margin: 0.5rem;
-  width: 400px;
+  width: 180px;
   object-fit: cover;
   transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
+  /* To flip the user's video, use -webkit-transform: rotateY(180deg); */
   -moz-transform: rotateY(180deg);
 }
 
