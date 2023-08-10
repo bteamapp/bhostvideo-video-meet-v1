@@ -19,7 +19,7 @@ showChat.addEventListener("click", () => {
   document.querySelector(".header__back").style.display = "block";
 });
 
-const user = prompt("Enter your name to join this meet");
+const user = prompt("Please enter your name to join this meet");
 
 var peer = new Peer({
   host: '127.0.0.1',
