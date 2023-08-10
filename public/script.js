@@ -27,6 +27,7 @@ var peer = new Peer({
   path: '/peerjs',
   config: {
     'iceServers': [
+      { url: 'stun:stun.l.google.com:19302' },
       { url: 'stun:stun01.sipphone.com' },
       { url: 'stun:stun.ekiga.net' },
       { url: 'stun:stunserver.org' },
