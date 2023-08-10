@@ -49,13 +49,13 @@
 }
 
 video {
-  height: 180px;
+  height: 300px;
   border-radius: 1rem;
   margin: 0.5rem;
-  width: 180px;
+  width: 400px;
   object-fit: cover;
   transform: rotateY(180deg);
-  /* To flip the user's video, use -webkit-transform: rotateY(180deg); */
+  -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
 }
 
@@ -181,8 +181,8 @@ video {
   }
 
   video {
-    height: 115px;
-    width: auto;
+    height: auto;
+    width: 100%;
   }
 
   #showChat {

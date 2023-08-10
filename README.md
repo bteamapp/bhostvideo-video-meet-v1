@@ -2,15 +2,15 @@
 
 An application customized by bTeam
 
-#### How is it?
-A Video Chat app built with NodeJS, Express, Peerjs, Socket.io
+#### How it is?
+A Video Chat app build with NodeJS, Express, Peerjs, Socket.io
 
 # Commit rules
  ### Please, view in COMMIT.md
 
 # Video-chat-v1
 
-Video-chat-v1 is a video chat app that makes it easy to group up with people you want to meet
+Video-chat-v1 is a video chat app that makes it easy to groups up with people you want to meet
 
 ![IMG](./video-chat.png)
 
@@ -18,15 +18,14 @@ Check out the live demo: https://video-chat-app-v1.herokuapp.com/
 
 An article itstaranarora wrote which explains how I build this: https://bit.ly/3wh0gyR
 
-This app is built using NodeJS, Socket.io, and Peerjs(WebRTC)
+This app is build using NodeJS, Socket.io, and Peerjs(WebRTC)
 
 ## How to run the project?
 
 1. Clone this repository in your local system.
-2. Open the command prompt from your project directory and run the `npm install` command.
-3. Open the command prompt from your project directory and run the `npm start` command.
-4. Go to your browser and type `http://127.0.0.1:3030/` in the address bar.
-5. Hurray! That's it.
+2. Open the command prompt from your project directory and run the command `npm start`.
+3. Go to your browser and type `http://127.0.0.1:5000/` in the address bar.
+4. Hurray! That's it.
 
 ### ToDo
 
