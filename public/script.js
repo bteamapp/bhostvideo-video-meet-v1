@@ -19,7 +19,7 @@ showChat.addEventListener("click", () => {
   document.querySelector(".header__back").style.display = "block";
 });
 
-const user = prompt("Please enter your name to join this meet");
+const user = prompt("Enter your name");
 
 var peer = new Peer({
   host: '127.0.0.1',
@@ -27,7 +27,6 @@ var peer = new Peer({
   path: '/peerjs',
   config: {
     'iceServers': [
-      { url: 'stun:stun.l.google.com:19302' },
       { url: 'stun:stun01.sipphone.com' },
       { url: 'stun:stun.ekiga.net' },
       { url: 'stun:stunserver.org' },
@@ -64,6 +63,7 @@ navigator.mediaDevices
     addVideoStream(myVideo, stream);
 
     peer.on("call", (call) => {
+      console.log('someone call me');
       call.answer(stream);
       const video = document.createElement("video");
       call.on("stream", (userVideoStream) => {
@@ -77,6 +77,7 @@ navigator.mediaDevices
   });
 
 const connectToNewUser = (userId, stream) => {
+  console.log('I call someone' + userId);
   const call = peer.call(userId, stream);
   const video = document.createElement("video");
   call.on("stream", (userVideoStream) => {
@@ -85,6 +86,7 @@ const connectToNewUser = (userId, stream) => {
 };
 
 peer.on("open", (id) => {
+  console.log('my id is' + id);
   socket.emit("join-room", ROOM_ID, id, user);
 });
 
@@ -149,7 +151,7 @@ stopVideo.addEventListener("click", () => {
 
 inviteButton.addEventListener("click", (e) => {
   prompt(
-    "Copy this invite link and send it to people you want to meet with",
+    "Copy this link and send it to people you want to meet with",
     window.location.href
   );
 });
@@ -158,9 +160,8 @@ socket.on("createMessage", (message, userName) => {
   messages.innerHTML =
     messages.innerHTML +
     `<div class="message">
-        <b><i class="far fa-user-circle"></i> <span> ${
-          userName === user ? "me" : userName
-        }</span> </b>
+        <b><i class="far fa-user-circle"></i> <span> ${userName === user ? "me" : userName
+    }</span> </b>
         <span>${message}</span>
     </div>`;
 });
