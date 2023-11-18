@@ -9,7 +9,7 @@ A Video Chat app built with NodeJS, Express, Peerjs, Socket.io
  ### Please, view in COMMIT.md
 
 # Video-chat-v1
-
+  
 Video-chat-v1 is a video chat app that makes it easy to group up with people you want to meet
 
 ![IMG](./video-chat.png)
